@@ -1,28 +1,159 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header :api="similApi"/>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Header,
+  },
+  data(){
+        return{
+            similApi: [
+                {
+                    text: 'Courses',
+                    new: false,
+                    drops: false
+                },
+                {
+                    text: 'Course Formats',
+                    new: false,
+                    drops: [
+                        {
+                            link: 'Default Style',
+                            styles: false
+                        },
+                        {
+                            link: 'Classic Style',
+                            styles: false
+                        },
+                        {
+                            link: 'Udemy Affiliate Style',
+                            styles: false
+                        },
+                        {
+                            link: 'Offline Style',
+                            styles: false
+                        },
+                        {
+                            link: 'Free Courses',
+                            styles: [
+                                {
+                                    ext: 'Default Style'
+                                },
+                                {
+                                    ext: 'Classic Style'
+                                },
+                                {
+                                    ext: 'Udemy Style'
+                                },
+                                {
+                                    ext: 'Offline Style'
+                                },
+                            ]
+                        },
+                        {
+                            link: 'Lesson Style 1',
+                            styles: false
+                        },
+                        {
+                            link: 'Lesson Style 2',
+                            styles: false
+                        }
+                    ]
+                },
+                {
+                    text: 'Add Courses',
+                    new: 'NEW',
+                    drops: false
+                },
+                {
+                    text: 'Pages',
+                    new: false,
+                    drops: [
+                        {
+                            link: 'About Us',
+                            styles: false
+                        },
+                        {
+                            link: 'Shop',
+                            styles: false
+                        },
+                        {
+                            link: 'Contact Us',
+                            styles: false
+                        },
+                    ]
+                },
+                 {
+                    text: 'Demos',
+                    new: false,
+                    drops: [
+                        {
+                            link: 'Udemy Affiliate',
+                            styles: false
+                        },
+                        {
+                            link: 'Light LMS',
+                            styles: false
+                        },
+                        {
+                            link: 'Dark LMS',
+                            styles: false
+                        },
+                        {
+                            link: 'Offline Courses',
+                            styles: false
+                        },
+                        {
+                            link: 'Offline Academy',
+                            styles: false
+                        },
+                        {
+                            link: 'Course Hub',
+                            styles: false
+                        },
+                        {
+                            link: 'Classic LMS',
+                            styles: false
+                        },
+                        {
+                            link: 'Private Instructor',
+                            styles: false
+                        },
+                        {
+                            link: 'RTL Demo',
+                            styles: false
+                        },
+                        {
+                            link: 'BuddyPress Demo',
+                            styles: false
+                        },
+                        {
+                            link: 'Distance Learning',
+                            styles: false
+                        },
+                        {
+                            link: 'Cooking Courses',
+                            styles: false
+                        },
+                    ]
+                },
+                
+
+            ]
+        }
+    }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import '@/style/commons.scss';
+
 </style>
