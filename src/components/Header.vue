@@ -9,10 +9,10 @@
 
         <!-- social -->
         <div id="social-top">
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
 
     </div>
@@ -39,9 +39,22 @@ export default {
 <style lang="scss" scoped>
 #head{
     height: 150px;
-    // #social-top{
-
-    // }
+    background-color: #fff;
+    #logo{
+        img {
+            margin-right: 200px;
+        }
+    }
+    #social-top{
+        font-size: 20px;
+        margin-left: 50px;
+        a {
+            margin: 0 10px;
+        }
+        a:hover{
+            color: #f2b71d;
+        }
+    }
 }
 
 </style>

@@ -155,5 +155,7 @@ export default {
 
 <style lang="scss">
   @import '@/style/commons.scss';
-
+  body {
+    background-color: black;
+  }
 </style>
