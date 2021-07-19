@@ -65,6 +65,9 @@ export default {
             line-height: 40px;
             background-color: #fff;
             border-top: 3px solid #f3bf33;
+            z-index: 500;
+            box-shadow: 0px 2px 3px 0px #888888;
+           
             &::after {
                 content: '';
                 position: absolute;
@@ -85,16 +88,17 @@ export default {
             }
             .start-right{
                 position: relative;
-               ul {
-                    
+                ul {
+                    box-shadow: 0px 0px 5px 0px #888888;
                     display: none;
                     position: absolute;
                     left: 100%;
                     top: -50px;
+                    z-index: 10;
                     li {
-                        width: 100px;
+                        width: 150px;
                     }
-               }
+                }
                 &:hover ul{
                 display: block;
                 background-color: #fff;
@@ -105,7 +109,7 @@ export default {
         h5 {
             margin: 0px 10px 0;
             font-weight:600;
-            
+            font-family: 'Roboto Slab', serif;
         }
     }
     
