@@ -193,8 +193,42 @@ name:'NewCourses'
             font-weight: 600;
             text-transform: uppercase;
             color: white;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #f2b91e;
+                border-radius: 10rem;
+                z-index: -2;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background-color: darken(#f2b91e, 15%);
+                transition: all .3s;
+                border-radius: 10rem;
+                z-index: -1;
+            }
+            &:hover {
+                color: #fff;
+                &:before {
+                width: 100%;
+                }
+            }
         }
-
+        
+       
         h2{
             font-family: 'Roboto Slab', serif;
             font-size: 50px;
@@ -202,15 +236,41 @@ name:'NewCourses'
             margin-bottom: 50px;
         }
         .box-news {
-            width: 60%;
+            width: 70%;
             margin: 0 auto;
             .card-new{
                 position: relative;
-                padding: 10px;
+                margin: 20px;
                 width: calc(100% / 3);
+                &:hover {
+                    box-shadow: 0px 2px 10px 0px #888888;
+                }
+                &:hover img {
+                    filter: brightness(50%);
+                }
+                &:hover .price {
+                    display: block;
+                }
+                &:hover h5 {
+                    color: #f2b91e;
+                }
+                .price{
+                    display: none;
+                    position: absolute;
+                    z-index: 400;
+                    top: 25%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-weight: 700;
+                    color: white;
+                }
                 img {
                     width: 100%;
+                    transition: 0.5s;
+
                 }
+
+                
                 .special{
                     display: block;
                     position: absolute;
@@ -223,18 +283,12 @@ name:'NewCourses'
                     text-transform: uppercase;
                     font-size: 12px;
                 }
-                .price{
-                    display: none;
-                    position: absolute;
-                    top: 25%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-weight: 700;
-                }
+                
                 .info{
                     padding:50px 20px 20px;
                     background-color: #fff;
                     border: 1px solid lightgray;
+                    // height: 230px;
                     hr{
                         color: grey;
                     }

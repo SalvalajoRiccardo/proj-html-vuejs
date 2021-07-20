@@ -84,7 +84,11 @@ export default {
 <style lang="scss" scoped>
 @import '@/style/commons.scss';
 #jumbo-box {
+    width: 100%;
     position: relative;
+    img{
+        width: 100%;
+    }
     #int-jumbo {
         position: absolute;
         left: 50%;

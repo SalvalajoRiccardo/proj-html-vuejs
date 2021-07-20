@@ -22,7 +22,7 @@ name: 'Sighature'
 <style lang="scss" scoped>
 @import '@/style/commons.scss';
 .sign-box {
-    width: 60%;
+    width: 70%;
     margin: 200px auto 100px;
     h2{
       font-size: 36px;

@@ -38,9 +38,11 @@ export default {
 
 <style lang="scss" scoped>
 #head{
+    width: 100%;
     height: 150px;
     background-color: #fff;
     #logo{
+        
         img {
             margin-right: 200px;
         }

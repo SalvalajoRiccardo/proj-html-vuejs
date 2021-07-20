@@ -5,6 +5,8 @@
     <main>
         <Sighature/>
         <NewCourses/>
+        <Ad/>
+        <Why/>
     </main>
   </div>
 </template>
@@ -14,6 +16,8 @@ import Header from './components/Header.vue'
 import Jumbotron from './components/Jumbotron.vue'
 import Sighature from './components/Sighature.vue'
 import NewCourses from './components/NewCourses.vue'
+import Ad from './components/Ad.vue'
+import Why from './components/Why.vue'
 
 export default {
   name: 'App',
@@ -22,6 +26,8 @@ export default {
     Jumbotron,
     Sighature,
     NewCourses,
+    Ad,
+    Why,
   },
   data(){
         return{
