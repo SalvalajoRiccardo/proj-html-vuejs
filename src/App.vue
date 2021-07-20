@@ -2,18 +2,26 @@
   <div id="app">
     <Header :api="similApi"/>
     <Jumbotron/>
+    <main>
+        <Sighature/>
+        <NewCourses/>
+    </main>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Jumbotron from './components/Jumbotron.vue'
+import Sighature from './components/Sighature.vue'
+import NewCourses from './components/NewCourses.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     Jumbotron,
+    Sighature,
+    NewCourses,
   },
   data(){
         return{
@@ -157,7 +165,7 @@ export default {
 
 <style lang="scss">
   @import '@/style/commons.scss';
-  body {
-    background-color: black;
-  }
+//   body {
+//     background-color: black;
+//   }
 </style>
