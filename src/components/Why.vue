@@ -65,7 +65,7 @@ export default {
     .why-box{
         
         .card-w{
-            width: 500px;
+            width: 600px;
             margin: 40px 20px;
             padding: 40px 20px;
             display: flex;

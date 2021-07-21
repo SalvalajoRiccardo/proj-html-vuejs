@@ -7,6 +7,8 @@
         <NewCourses/>
         <Ad/>
         <Why/>
+        <Numbers/>
+        <Students/>
     </main>
   </div>
 </template>
@@ -18,6 +20,8 @@ import Sighature from './components/Sighature.vue'
 import NewCourses from './components/NewCourses.vue'
 import Ad from './components/Ad.vue'
 import Why from './components/Why.vue'
+import Numbers from './components/Numbers.vue'
+import Students from './components/Students.vue'
 
 export default {
   name: 'App',
@@ -28,6 +32,8 @@ export default {
     NewCourses,
     Ad,
     Why,
+    Numbers,
+    Students,
   },
   data(){
         return{

@@ -197,6 +197,7 @@ name:'NewCourses'
             position: relative;
             overflow: hidden;
             z-index: 1;
+            // per effetto over
             &:after {
                 content: '';
                 position: absolute;
