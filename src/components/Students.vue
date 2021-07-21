@@ -2,16 +2,16 @@
     <div id="students">
         <h2>What Students Say</h2>
         <div class="slider-top d-flex justify-content-center align-items-center">
-            <button>left</button>
+            <button @click="prevAlbum()"><i class="fas fa-arrow-left"></i></button>
             
             <div v-for="(stu, index) in people" :key="index">
-                <img @click="change(index)" :class="(index === contatote) ? 'focus' : ''" :src="stu.iga" alt="student">
+                <img @click="change(index)" :class="(index == contatore) ? 'focus' : ''" :src="stu.iga" alt="student">
             </div>
             
-            <button>right</button>
+            <button @click="nextAlbum()"><i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="slider-bot">
-            <div v-for="(stu, index) in people" :key="index">
+            <div :class="(index == contatore) ? 'active' : 'none'" v-for="(stu, index) in people" :key="index">
                 <h3>{{stu.tit}}</h3>
                 <div>
                     <i class="fas fa-star"></i>
@@ -36,7 +36,7 @@ export default {
     name:'Students',
     data(){
         return{
-            contatote: 0,
+            contatore: 0,
             people: [
                 {
                     iga: img1,
@@ -59,14 +59,14 @@ export default {
     methods: {
         nextAlbum() {
             this.contatore++;
-            if (this.contatore > this.images.length - 1){
+            if (this.contatore > this.people.length - 1){
                 this.contatore = 0;
             }
         },
         prevAlbum() {
             this.contatore--;
             if (this.contatore < 0){
-                this.contatore = this.images.length - 1;
+                this.contatore = this.people.length - 1;
             } 
         },
         change(i) {
@@ -74,15 +74,22 @@ export default {
             console.log(this.contatore);
         },
     },
-    
-    
+    mounted() {
+        setInterval(this.nextAlbum, 10000);
+    }
     
 }
 </script>
 
 <style lang="scss" scoped>
     .focus{
-        transform: scale(2);
+        transform: scale(1.3);
+    }
+    .active{
+        display: block;
+    }
+    .none{
+        display: none;
     }
     #students{
         text-align: center;
@@ -95,9 +102,35 @@ export default {
             margin: 100px 0;
         }
         .slider-top{
+            margin-bottom: 50px;
+            button{
+                border: none;
+                background-color: #fff;
+                font-size: 30px;
+            }
             img{
                 margin: 0 30px;
                 border-radius: 50%;
+                width: 70px;
+            }
+        }
+        .slider-bot{
+            margin-bottom: 50px;
+            i{
+                color: #f2b91e;
+                margin: 0 2px;
+            }
+            h3{
+                font-family: 'Roboto Slab', serif;
+                font-weight: 600;
+                font-size: 25px;
+            }
+            p{
+                margin-top: 20px;
+                line-height: 35px;
+                font-family: 'Roboto Slab', serif;
+                font-size: 20px;
+                width: 770px;
             }
         }
     }
