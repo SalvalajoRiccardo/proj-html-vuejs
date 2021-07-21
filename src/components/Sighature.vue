@@ -23,11 +23,15 @@ name: 'Sighature'
 @import '@/style/commons.scss';
 .sign-box {
     width: 70%;
-    margin: 200px auto 100px;
+    margin: 0 auto 100px;
+    padding-top: 100px;
+    background-color: #fff;
     h2{
+      font-family: 'Roboto Slab', serif;
       font-size: 36px;
       font-weight: 700;
       line-height: 50px;
+      margin-top: 100px;
     }
     .text {
       width: 50%;
@@ -35,6 +39,7 @@ name: 'Sighature'
       p{
         font-size: 18px;
         line-height: 30px;
+        margin-top: 100px;
       }
     }
     #sign{

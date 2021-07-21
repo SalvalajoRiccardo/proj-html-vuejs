@@ -113,6 +113,7 @@ export default {
         width: 80%;
         padding: 50px;
         position: absolute;
+        z-index: 30000;
         bottom: -10%;
         left: 50%;
         transform: translate(-50%, 0%);

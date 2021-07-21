@@ -94,7 +94,9 @@ export default {
     #students{
         text-align: center;
         width: 50%;
-        margin: 0 auto;
+        margin: 0 auto 300px;
+        background-color: #fff;
+        padding-bottom: 100px;
         h2{
             font-family: 'Roboto Slab', serif;
             font-weight: 600;
@@ -126,7 +128,7 @@ export default {
                 font-size: 25px;
             }
             p{
-                margin-top: 20px;
+                margin: 20px auto 0;
                 line-height: 35px;
                 font-family: 'Roboto Slab', serif;
                 font-size: 20px;

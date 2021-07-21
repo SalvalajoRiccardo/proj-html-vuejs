@@ -10,6 +10,8 @@
         <Numbers/>
         <Students/>
     </main>
+
+    <Footer/>
   </div>
 </template>
 
@@ -22,6 +24,7 @@ import Ad from './components/Ad.vue'
 import Why from './components/Why.vue'
 import Numbers from './components/Numbers.vue'
 import Students from './components/Students.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
@@ -34,6 +37,7 @@ export default {
     Why,
     Numbers,
     Students,
+    Footer
   },
   data(){
         return{
@@ -177,7 +181,14 @@ export default {
 
 <style lang="scss">
   @import '@/style/commons.scss';
-//   body {
-//     background-color: black;
-//   }
+  #app {
+      position: relative;
+      z-index: 300;
+      background-color: #fff;
+      main{
+          background-color: #fff;
+          position: relative;
+         z-index: 300;
+      }
+  }
 </style>
